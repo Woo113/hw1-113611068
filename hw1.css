@@ -1,0 +1,101 @@
+body{
+    background-image: url('background.jpg');
+    background-size: cover ;
+    background-attachment: fixed;
+
+    font-family: 'Lemon', "Noto Sans TC", serif;
+    color: white;
+}
+
+header{
+    text-align: center;
+}
+
+a{
+    color: black;
+    text-decoration: none;
+}
+
+a:hover{
+    color:gray
+}
+    
+ul.dropdown{/*主選單*/
+    margin:50px 150px 50px 100px;
+    padding: 0;
+    list-style: none;/*取消樣式*/
+
+    display: flex;/*均分寬度*/
+
+    font-size: 25px;
+    background-color: wheat;
+    
+}
+
+ul.dropdown li{/*主選單選項*/
+    flex:1 ;/*等分空間*/
+    text-align: center;
+
+    white-space: nowrap;/*防止換行*/
+    border: white 4px solid;
+    
+    color: black;
+    position: relative;
+}
+
+ul.dropdown ul{/*次選單*/
+    list-style: none;
+    display: none;/*隱藏次選單*/
+
+    position: absolute;/*搭配position: relative;使用*/
+    z-index: 99;/*設定圖層高低*/
+    right: 0;
+    top: 100%;
+    width: 100%;
+}
+
+ul.dropdown ul li{/*次選單選項*/
+    border: white 2px solid;
+    background-color: wheat;
+}
+
+ul.dropdown li:hover{/*滑鼠滑入變色*/
+    background-color: rgb(244, 186, 78);
+    transform: scale(1.03);
+    transition: background-color 0.5s, transform 0.5s; /* 平滑過渡效果 */
+}
+
+ul.dropdown li:hover > ul { /* 滑鼠滑入展開次選單*/
+    display: block;
+}
+
+img{
+    float: left;
+    width: 12em;
+    height: auto;
+    margin: 0 50px 0 100px ;
+    
+}
+
+div.info{
+    background-color:rgb(42, 42, 78);
+    margin-top:0;
+    border: 5px white double;
+    padding:0 200px 10px 15px ;
+    float:left;
+}
+
+div.introduction{
+    background-color:rgb(42, 42, 78);
+    margin: 25px 100px 50px 100px;
+    padding: 10px;
+    border: 5px white double;
+    text-align: center;
+    float: left;
+}
+
+footer{
+    text-align:center;
+    clear: both;
+
+}
